@@ -3,7 +3,7 @@ import subprocess
 
 @given('the user runs the clicbrik hello command with no parameters: {text}')
 def step_impl(context, text):
-    args = ['poetry', 'run', 'clicbrik', 'hello']
+    args = ['poetry', 'run', 'bricklee', 'hello']
     context.response = subprocess.run(args, capture_output=True)
 
 @then('the CLI returns {text}')

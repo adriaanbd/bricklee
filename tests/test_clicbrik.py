@@ -1,9 +1,9 @@
-from clicbrik import __version__
+from bricklee import __version__
+from bricklee.entrypoint import main
 import unittest
-from clicbrik.entrypoint import main
 
 class TestClicBrik(unittest.TestCase):
-    def test_version(self):
+    def test_version_010(self):
         self.assertEqual(__version__, '0.1.0')
         
     def test_generic_hello(self):
