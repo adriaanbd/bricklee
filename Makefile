@@ -15,7 +15,7 @@ patch:
 
 testpypi_config:
 	poetry config repositories.testpypi https://test.pypi.org/legacy/
-	poetry config http-basic.testpypi $TEST_PYPI_USERNAME $TEST_PYPI_PASSWORD
+	poetry config http-basic.testpypi ${TEST_PYPI_USERNAME} ${TEST_PYPI_PASSWORD}
 
 publish_test:
 	poetry publish -r testpypi
