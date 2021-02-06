@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "bricklee"
 version = "0.1.0"
-description = ""
+description = "Just an ol' revolutionary CLI."
 authors = ["Adriaan Beiertz <adriaanbd@gmail.com>"]
 
 [tool.poetry.dependencies]
