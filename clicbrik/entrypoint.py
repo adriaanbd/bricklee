@@ -15,3 +15,4 @@ def main(args=None):
     args = parser.parse_args(args)
     greeting = greet(args.name)
     print(greeting)
+    return greeting
