@@ -1,17 +1,13 @@
 from behave import *
-from clicbrik import entrypoint
-from pytest import capsys
+import subprocess
 
-@given('the user runs the clicbrik hello command')
-def step_impl(context):
-    pass
-
-@when('the user attaches no additional parameters to the command')
+@given('the user runs the clicbrik hello command with no parameters: {text}')
 def step_impl(context, text):
-    pass
+    args = ['poetry', 'run', 'clicbrik', 'hello']
+    context.response = subprocess.run(args, capture_output=True)
 
-@then('the CLI answers "Hello Panama City, Panama."')
-def step_impl(context, text, capsys):
-    entrypoint.main(text)
-    print(capsys)
-    assert text in capsys
+@then('the CLI returns {text}')
+def step_impl(context, text):
+    bytes_output = context.response.stdout
+    expected = "Hello Panama City, Panama."
+    assert expected in bytes_output.decode()
