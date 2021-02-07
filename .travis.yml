@@ -1,5 +1,17 @@
 language: python
+
 python: "3.9"
-script:
-  - make install
-  - make test
+
+install: make install
+
+stages:
+  - test
+  - deploy
+    if: branch = main
+
+jobs:
+  include:
+    - stage: test
+      script: make test
+    - stage: deploy
+      script: make deploy

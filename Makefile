@@ -20,5 +20,4 @@ testpypi_config:
 publish_test:
 	poetry publish -r testpypi
 
-publish:
-	poetry publish
+deploy: patch build testpypi_config publish_test 
