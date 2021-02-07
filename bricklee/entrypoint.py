@@ -14,6 +14,4 @@ def main(args=None):
         args = sys.argv[1:]
     args = parser.parse_args(args)
     greeting = greet(args.name)
-    if 'unittest' in sys.modules.keys():
-        return greeting
     print(greeting)
