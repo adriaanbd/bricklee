@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "bricklee"
+version = "0.1.4"
+description = "Just an ol' revolutionary CLI."
+authors = ["Adriaan Beiertz <adriaanbd@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+behave = "^1.2.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bricklee = 'bricklee.entrypoint:main'
