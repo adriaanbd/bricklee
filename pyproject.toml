@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bricklee"
-version = "0.1.4"
+version = "0.1.5"
 description = "Just an ol' revolutionary CLI."
 authors = ["Adriaan Beiertz <adriaanbd@gmail.com>"]
 
