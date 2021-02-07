@@ -1,7 +1,7 @@
 from behave import *
 import subprocess
 
-@when('the user runs the clicbrik hello command with no parameters: {text}')
+@given('the user runs the clicbrik hello command with no parameters: {text}')
 def step_impl(context, text):
     args = ['poetry', 'run', 'bricklee', 'hello']
     context.response = subprocess.run(args, capture_output=True)
